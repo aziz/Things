@@ -1,0 +1,99 @@
+/* =Date Picker
+----------------------------------------------------------------------------*/
+.ui-datepicker {
+  z-index:9999999;
+  width:175px;
+  height:188px;  
+  background:transparent url('/gui/tb.png') no-repeat 0 -576px;    
+}
+
+.ui-datepicker-header {
+  padding:26px 22px 0 0;
+  position: relative;
+  text-align:right;
+}
+
+.ui-datepicker-title {  font-weight:bold;}
+
+.ui-datepicker-prev {
+  position: absolute;
+  left:46px;top:27px;
+  width:12px;height:12px;
+  background:transparent url('/gui/sp.png') no-repeat 0 -1061px;    
+}
+
+.ui-datepicker-next {
+  position: absolute;
+  left:20px;top:27px;
+  width:12px;height:12px;
+  background:transparent url('/gui/sp.png') no-repeat 0 -1035px;    
+}
+
+.ui-datepicker-next .ui-icon, .ui-datepicker-prev .ui-icon {display: none;}
+
+.ui-datepicker-calendar {
+  margin:4px 20px 4px 21px;
+}
+
+.ui-datepicker table th {
+  font-weight:bold;
+  width:19px;
+  height:16px;  
+  text-align:center;
+}
+
+.ui-datepicker table td {
+  width:19px;
+  text-align:center;
+}
+
+.ui-datepicker table thead tr {
+  margin-bottom:2px;
+  display: block;
+}
+
+.ui-datepicker table tbody tr {
+  display: block;
+  margin-bottom:2px;    
+}
+
+.ui-datepicker table tbody tr td a {
+  display:block;
+  background-color:#e6e6e6;
+  height:16px;  
+  line-height:16px;
+  width:19px;
+}  
+
+
+.ui-datepicker table tbody tr td:first-child a {
+  -moz-border-radius-topleft:8px; 
+  -moz-border-radius-bottomleft:8px; 
+  -webkit-border-top-left-radius:8px;
+  -webkit-border-bottom-left-radius:8px;
+}
+
+.ui-datepicker table tbody tr td:last-child a  {
+  -moz-border-radius-topright:8px; 
+  -moz-border-radius-bottomright:8px; 
+  -webkit-border-top-right-radius:8px;
+  -webkit-border-bottom-right-radius:8px;
+}
+
+
+.ui-datepicker .ui-datepicker-other-month {background-color:#e6e6e6;}
+.ui-datepicker table tbody a { color:#000;}
+.ui-datepicker .ui-datepicker-today a {  background-color:#cacaca; }
+.ui-datepicker .ui-datepicker-days-cell-over a { background-color:#95bbff;color:#fff;}
+.ui-datepicker .ui-datepicker-current-day a {  background-color:#6a9df9;color:#fff;}
+.ui-datepicker-buttonpane {  padding:0px;}
+.ui-datepicker .ui-datepicker-close {display: none;}
+.ui-datepicker .ui-datepicker-current {
+  position: absolute;
+  width:12px;
+  height:12px;
+  text-indent:-1000px;
+  left:33px;top:27px;
+  border:0;
+  background:transparent url('/gui/sp.png') no-repeat 0 -1048px;   
+}

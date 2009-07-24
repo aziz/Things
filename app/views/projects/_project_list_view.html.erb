@@ -1,0 +1,38 @@
+<li class="project-list-item task <%= "done" if project.done? %> <%= "task-done" if project.in_logbook? %>" id="p-<%= project.id %>">
+  <% if project.due_at %>
+    <span class="due <%= "overdue" if project.overdue? %>"> 
+      <%= relative_due_date(project.due_at) %> 
+    </span>
+  <% end %>
+  
+  <!--
+  <%# if project.in_today? %>
+  <span class="today"></span>
+  <%# end %> -->
+  
+  <% if project.tag_list.size > 0  %>
+  <ul class="tags">
+    <% for tag in project.tag_list %>
+      <li title="<%= tag %>"><%= tag %></li>
+    <% end %>
+  </ul>
+  <% end %>
+  
+  <span class="checkbox <%# "is_today" if project.in_today? %> <%= "is_overdue" if project.overdue? %>"></span>
+  
+  <% if project.in_logbook? %>
+    <span class="done-date"><%=  project.done_at.strftime("%b %d, %Y") %></span>
+  <% else %>
+    <span class="task-items" style="background-position:<%= project_progress(project) %>px -764px">
+      <%= pluralize(project.tasks.size, "item") %>
+    </span>
+  <% end %>
+  
+  
+  
+  <span class="title"><%= project.title %></span>
+  
+  <% if project.notes && project.notes.size > 0  %>
+    <img class="note-icon" src="/gui/blank.gif" alt="Note"/>
+  <% end %>
+</li>

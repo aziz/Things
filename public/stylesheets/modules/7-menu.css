@@ -1,0 +1,195 @@
+/* =MENU
+----------------------------------------------------------------------------*/
+.menu {
+  min-width:205px;
+  max-width:340px;
+  border:medium none;
+  position:absolute;
+  width:auto;
+  z-index:9999;
+}
+
+.visible {visibility: visible;}
+
+.menu ul.menu_list {
+  line-height:19px;
+  margin:0 0 4px;
+  background-color:#FFFFFF;
+}
+
+.menu ul.menu_list li {
+  display:block;
+  position:relative;
+  cursor:default;
+  height:19px;
+  float:none;
+  overflow:hidden;
+}
+
+.menu ul.menu_list li.gui_separator {
+  border-bottom:solid 1px #D6D6D6;
+  height:5px;
+  margin-bottom:4px;
+}
+
+.menu ul.menu_list li a {
+  white-space:nowrap;
+  display:block;
+  margin:0;
+  position:relative;  
+  width:100%;
+  height:19px;
+  color:#000;
+}
+
+.menu ul.menu_list li a.active, .menu ul.menu_list li a:hover {
+  background:transparent url('/gui/sp.png') repeat-x scroll 0 -1280px;  
+  border:medium none;
+  color:#FFFFFF;
+}
+
+
+.menu ul.menu_list li a.active .label, .menu ul.menu_list li a:hover .label {color:#FFFFFF;}
+.menu ul.menu_list li a.disabled {  background:none;  }
+.menu ul.menu_list li a.disabled .label, .menu ul.menu_list li a.disabled:hover .label, 
+.menu ul.menu_list li a.disabled .shortcut, .menu ul.menu_list li a.disabled:hover .shortcut {color:#949494;}
+
+.menu ul.menu_list li a .label {
+  font-size:13px;
+  font-weight:normal;
+  white-space:nowrap;
+  height:19px;
+  padding:0 18px 0 22px;
+  line-height:19px;
+  text-shadow:none;
+}
+
+.menu ul.menu_list li a .icon {
+  position: absolute;
+  left:3px;top:2px;
+  width:16px;
+  height:16px;
+}
+
+.menu ul.menu_list li a .shortcut {
+  float:right;
+  font-size:13px;
+  font-weight:normal;
+  white-space:nowrap;
+  height:19px;
+  padding:0 12px;
+}
+
+
+.menu .topLeft {
+  background:transparent url('/gui/shadow_corners.png') no-repeat scroll -10px -654px;
+  height:27px;
+  left:-20px;
+  position:absolute;
+  top:-16px;
+  width:30px;
+}
+
+.menu .topEdge {
+  background:transparent url('/gui/shadows_repeat_x.png') repeat-x scroll 0 -300px;
+  height:20px;
+  left:10px;
+  position:absolute;
+  right:10px;
+  top:-20px;
+}
+
+.menu .topRight {
+  background:transparent url('/gui/shadow_corners.png') no-repeat scroll 0 -734px;
+  height:27px;
+  position:absolute;
+  right:-20px;
+  top:-16px;
+  width:30px;
+}
+
+.menu .leftEdge {
+  background:transparent url('/gui/shadows_repeat_y.png') repeat-y scroll -240px 0;
+  bottom:7px;
+  left:-20px;
+  position:absolute;
+  top:11px;
+  width:20px;
+}
+
+.menu .rightEdge {
+  background:transparent url('/gui/shadows_repeat_y.png') repeat-y scroll -270px 0;
+  bottom:7px;
+  position:absolute;
+  right:-20px;
+  top:11px;
+  width:20px;
+}
+
+.menu .bottomRight {
+  background:transparent url('/gui/shadow_corners.png') no-repeat scroll 0 -760px;
+  bottom:-28px;
+  height:35px;
+  position:absolute;
+  right:-20px;
+  width:30px
+}
+
+.menu .bottomEdge {
+  background:transparent url('/gui/shadows_repeat_x.png') repeat-x scroll 0 -270px;
+  bottom:-21px;
+  height:25px;
+  left:10px;
+  position:absolute;
+  right:10px;
+}
+
+.menu .bottomLeft{
+  background:transparent url('/gui/shadow_corners.png') no-repeat scroll -10px -680px;
+  bottom:-28px;
+  height:35px;
+  left:-20px;
+  position:absolute;
+  width:30px;
+}
+
+.menubar > ul > li > .menu > .leftEdge {top:0px;}
+.menubar > ul > li > .menu > .rightEdge { top:0px;}
+
+
+/* MENU:MINI------------------------------------------------------------- */
+.menu.mini {
+  min-width:75px;
+  max-width:340px;
+  border:medium none;
+  position:absolute;
+  width:auto;
+  z-index:9999;
+}
+
+.menu.mini ul.menu_list {  line-height:16px;}
+.menu.mini ul.menu_list li {  height:16px;}
+.menu.mini ul.menu_list li a {  height:16px;}
+.menu.mini ul.menu_list li a.active, .menu.mini ul.menu_list li a:hover {  background:transparent url('/gui/sp.png') repeat-x scroll 0 -1241px;  }
+.menu.mini ul.menu_list li a .label {
+  font-size:11px;
+  height:16px;
+  padding:0 9px 0 22px;
+  line-height:16px;
+}
+
+.menu.mini ul.menu_list li a .icon {top:0px;}
+.menu.mini ul.menu_list li a.disabled {  background:none;  }
+.menu.mini ul.menu_list li a .shortcut {
+  font-size:11px;
+  height:16px;
+  padding:0 12px 0 6px;
+}
+
+
+/* MENU:RTL------------------------------------------------------------- */
+.menu.rtl {  margin-left:0;  margin-right:1px;}
+.menu.rtl ul.menu_list {  direction:rtl;  text-align:right;}
+.menu.rtl ul.menu_list li a .icon {  right:3px;top:0px;left:auto;}
+.menu.rtl ul.menu_list li a .shortcut { float:left;}
+

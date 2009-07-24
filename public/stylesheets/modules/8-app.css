@@ -1,0 +1,140 @@
+/* =BOTTOM-BAR
+----------------------------------------------------------------------------*/
+#footer a.plus {
+  position: absolute;
+  top:5px;left:20px;
+  height:22px;width:37px;
+  background:transparent url("/gui/sp2.png") no-repeat 0px -72px;
+}
+#footer a.plus.active  {  background:transparent url("/gui/sp2.png") no-repeat 0px -95px;}
+
+#footer .gear {
+  position: absolute;
+  top:4px;left:57px;
+  height:22px;width:36px;
+  background:transparent url("/gui/sp2.png") no-repeat 0px -117px;  
+}
+#footer a.gear.active {  background:transparent url("/gui/sp2.png") no-repeat 0px -140px;}
+#footer a.button span {display: none;}
+
+#footer #status-bar {
+  text-align:center;
+  line-height:33px;
+  text-shadow:0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+#footer #search-box {
+  width:190px;height:22px; 
+  top:5px;right:14px;
+  position: absolute;
+}
+
+#search-box .left-cap {
+  background:transparent url("/gui/sp2.png") no-repeat -3px -210px;  
+  width:42px; height:22px;
+  position: absolute;
+  top:0;left:0px;
+}
+
+#search-box .right-cap {
+  background:transparent url("/gui/sp2.png") no-repeat 0px -164px;  
+  width:19px; height:22px;
+  position: absolute;
+  top:0;right:0px;
+}
+
+#search-box .text-holder {
+  background:transparent url("/gui/sp2.png") repeat-x 0px -187px;  
+  margin:0px 19px 0 42px;
+  height:22px;
+}
+
+#search-box input {
+ border:0;
+ height:17px;
+ width:120px; 
+ margin:2px 0px;
+ line-height:15px;
+ vertical-align:middle;
+}
+
+/* =TOP-BAR
+----------------------------------------------------------------------------*/
+#user-name {
+  position: absolute;
+  padding-left:22px;
+  background:transparent url("/gui/sp.png") no-repeat 0px -900px;  
+  height:19px;
+  line-height:17px;
+  top:4px;left:10px;
+  text-shadow:0 1px 1px rgba(255, 255, 255, 0.5);
+  font-weight:bold;
+  font-size:8pt; 
+}
+#logout a {
+  position: absolute;
+  height:17px;
+  line-height:17px;
+  top:3px;right:10px;
+  text-shadow:0 1px 1px rgba(255, 255, 255, 0.8);
+  color:#000;
+}
+
+#logout a:hover {
+  text-shadow:0 1px 1px rgba(0, 0, 0, 0.8);
+  color:#FFF;
+}
+
+/* =GUIDES
+----------------------------------------------------------------------------*/
+
+.start-here {
+  position: absolute;
+  bottom:55px;left:20px;
+  width:200px;height:89px;
+  background:transparent url('/gui/tb.png') no-repeat 0 -791px;
+  overflow:auto;
+}
+
+.guide {
+  width:358px; height:143px;
+  background:transparent url('/gui//guide-box.jpg') no-repeat 0 0;
+  margin:90px auto 0;
+  position: relative;
+}
+
+.guide .text {
+  padding:25px 22px 25px 60px;
+  font-size:9pt;
+  line-height:16px;
+}
+
+.guide .text p {margin-bottom:5px}
+.guide .icon {
+  position: absolute;
+  top:22px; left:30px;
+  width:20px;height:20px;
+}
+
+.guide-inbox {display:none;}
+.guide-today {display:none;}
+.guide-next {display:none;}
+.guide-someday {display:none;}
+.guide-scheduled {display:none;}
+.guide-projects {display:none;}
+.guide-logbook {display:none;}
+.guide-trash {display:none;}
+
+.inbox .guide-inbox {display:block;}
+.today .guide-today {display:block;}
+.next .guide-next {display:block;}
+.someday .guide-someday {display:block;}
+.scheduled .guide-scheduled {display:block;}
+.projects .guide-projects {display:block;}
+.done .guide-logbook {display:block;}
+.trash .guide-trash {display:block;}
+
+
+/* =APP Rules
+----------------------------------------------------------------------------*/
+#things-trash #tagbar , #things-logbook #tagbar  { display: none !important;}

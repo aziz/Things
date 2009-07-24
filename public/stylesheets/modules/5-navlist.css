@@ -1,0 +1,242 @@
+
+/* =NAV-LIST
+----------------------------------------------------------------------------*/
+.sidebar {position: relative;}
+.nav-list {}
+.nav-list-bottom {bottom:0;position: absolute;width:100%;}
+.nav-list-top {position: relative; /* height:100% */}
+
+.nav-list > ul > li {
+  xmargin-bottom:5px;
+  display: block;
+  text-shadow:0 1px 0 rgba(255, 255, 255, 0.75);	
+}
+
+.nav-list ul li span.title {
+  padding:0;
+  color:#5f7081;
+  text-transform: uppercase;
+  font-weight:bold;
+  display: block;
+  height:24px;
+  line-height:24px;
+}
+
+.nav-list  ul li a.row {
+  padding:0 0 0 16px;  
+  margin:0 0 0 28px;  
+}
+
+.nav-list  ul li.collapsable > a.row {
+  padding:0 0 0 26px;  
+  margin:0 0 0 16px;  
+}
+
+
+.nav-list > ul > li span.title {
+  padding:0 0 0 10px;  
+}
+
+.nav-list ul li .row .triangle {
+  position: absolute;
+  left:0px;
+  top:3px;
+  width:14px;
+  height:16px;
+  display: block;
+}
+
+.nav-list > ul > li span.title .icon {
+  width:14px;
+  height:16px;
+  display: block;
+  float:left;
+}
+
+.nav-list ul li.collapsable span.title .icon, .nav-list ul li.collapsable .row .triangle {
+  background:transparent url("/gui/sp.png") repeat-x scroll -10px -330px;
+  width:10px;height:10px;
+  top:7px;
+  position: relative;
+  margin-right:2px;
+}
+
+.nav-list ul li.collapsable.close span.title .icon, .nav-list ul li.collapsable.close .row .triangle   {
+  background:transparent url("/gui/sp.png") repeat-x scroll 0px -330px;
+  cursor:pointer;
+}
+
+.nav-list ul.section-list {margin-top:-5px;margin-bottom:7px}
+.nav-list li.collapsable {
+  cursor:pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+.nav-list li.collapsable.close ul { display: none;}
+
+.nav-list .row {
+  padding:0 0 0 26px;
+	display:block;
+	height:24px;
+	border:0;
+	overflow:hidden;
+	white-space:nowrap;	
+	position: relative;
+}
+
+.nav-list .row .title {
+	color:#000;
+	font-size:8pt;
+	font-weight:normal;
+	text-shadow:none;	
+	margin-top:0;
+	line-height:24px;
+	text-transform: none;
+	cursor:pointer;
+	margin-left:-3px;
+}
+
+.nav-list .active .title  {color:#FFF;text-shadow:0 1px 2px rgba(0, 0, 0, 0.8); }
+.nav-list .row .icon {
+	height:20px;
+	width:20px;	
+	position: absolute;
+	left:0;
+	top:2px;
+}
+
+.nav-list li.collapsable > .row > .icon {	left:10px;}
+
+.nav-list .active  {
+	background:transparent url("/gui/sp.png") repeat-x 0 -180px;
+	border:0;
+	margin-top:0;
+	text-shadow:0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.nav-list a:active {
+  background:transparent;
+  border:0;
+  height:24px;
+	margin-top:0;
+	text-shadow:0 1px 0 rgba(0, 0, 0, 0.3);
+	color:#333;
+}
+
+.nav-list li.collapsable li .row {	height:20px;}
+.nav-list li.collapsable li span.title {  height:20px;  line-height:22px;}
+.nav-list li.collapsable li .row .title {	margin-left:-5px;}
+.nav-list li.collapsable li .row .icon {
+	height:20px;
+	width:20px;	
+	position: absolute;
+	left:0;
+	top:0px;
+}
+
+
+.sidebar .capsule {
+  position: absolute;
+  right:5px;
+  top:5px;
+  display: block;
+  -moz-border-radius:6px;
+  -webkit-border-radius:7px;
+  border-radius:6px;   
+  background-color:#8998bc;
+  height:14px;
+  display: block;
+  float:right;  
+  line-height:14px;
+  color:white;
+  font-weight:bold;
+  text-shadow:none;
+  padding:0px 6px 0px;
+}
+
+
+.sidebar .dcapsule {
+  position: absolute;
+  right:5px;
+  top:5px;
+  display: block;
+  height:14px;
+  display: block;
+  float:right;  
+  line-height:14px;
+  color:white;
+  font-weight:bold;
+  text-shadow:none;
+}
+
+.sidebar .dcapsule .red {
+  -moz-border-radius-topleft:6px; 
+  -moz-border-radius-bottomleft:6px; 
+  -webkit-border-top-left-radius:7px;
+  -webkit-border-bottom-left-radius:7px;  
+  margin-right:1px;
+  background-color:#b36b6c;
+  display: block;
+  float:right;  
+  padding:0px 3px 0px 6px;
+}
+
+.sidebar .dcapsule .blue {
+  -moz-border-radius-topright:6px; 
+  -moz-border-radius-bottomright:6px; 
+  -webkit-border-top-right-radius:7px;
+  -webkit-border-bottom-right-radius:7px;
+  background-color:#8998bc;  
+  display: block;
+  float:right;  
+  padding:0px 6px 0px 3px;
+}
+
+
+.sidebar .capsule.red {  background-color:#b36b6c;}
+.sidebar .active .capsule, .sidebar .active .dcapsule .red, .sidebar .active .dcapsule .blue {  background-color:white;  color:#8998bc;}
+.sidebar li .capsule {display:none}
+.sidebar li.has_capsule .capsule {display:block}
+
+.drop-highlight {
+  background-color:#b1d7ff;
+  border:2px solid #6ca8f9;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;     
+  display:none;
+  height:20px;
+  position: absolute;
+  z-index:-1;
+  left:12px;
+  right:1px;
+}
+
+.droppable.draggable_hover .drop-highlight {display: block;}
+.droppable.draggable_hover a.row {opacity:0.7;}
+
+/* NAV-LIST:RTL------------------------------------------------------------- */
+.nav-list.rtl  ul li a.row {padding:0 16px 0 0; margin:0 16px 0 0;}
+.nav-list.rtl > ul > li span.title {padding:0 8px 0 0;}
+.nav-list.rtl  ul li.collapsable > a.row {padding:0 26px 0 0;  margin:0 16px 0 0;  }
+.nav-list.rtl ul li .row .triangle {  left:auto;right:0;}
+.nav-list.rtl > ul > li span.title .icon {  float:right;}
+.nav-list.rtl .row {padding:0 26px 0 0;}
+.nav-list.rtl .row .icon {left:auto;right:0}
+.nav-list.rtl li.collapsable > .row > .icon {	left:auto;right:10px;}
+
+/* NAV-LIST:ICONS------------------------------------------------------------- */
+.inbox { background:transparent url("/gui/sp.png") no-repeat scroll 0px -60px}
+.today { background:transparent url("/gui/sp.png") no-repeat scroll 0px -81px}
+.next { background:transparent url("/gui/sp.png") no-repeat scroll 0px -100px}
+.scheduled { background:transparent url("/gui/sp.png") no-repeat scroll 0px -120px}
+.someday { background:transparent url("/gui/sp.png") no-repeat scroll 0px -140px}
+.projects { background:transparent url("/gui/sp.png") no-repeat scroll 0px -160px}
+.area { background:transparent url("/gui/sp.png") no-repeat scroll 0px -210px}
+.project { background:transparent url("/gui/sp.png") no-repeat scroll 0px -230px}
+.person { background:transparent url("/gui/sp.png") no-repeat scroll 0px -249px}
+.trash { background:transparent url("/gui/sp.png") no-repeat scroll 0px -270px}
+.trash-full {background:transparent url("/gui/sp.png") no-repeat scroll 0px -310px}
+.logbook { background:transparent url("/gui/sp.png") no-repeat scroll 0px -290px}

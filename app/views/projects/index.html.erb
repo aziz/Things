@@ -1,0 +1,14 @@
+<ul class="task-list" id="<%= ["trash","logbook"].include?(params[:action]) ? "done-task-list":"task-list" %>">
+    <%= render :partial => 'project_list_view', :collection => @projects, :as => :project %>
+</ul>  
+
+<% if @projects && @projects.size == 0  %>
+
+<%= render :partial => '/layouts/guides'  %>
+
+<% end %>
+
+
+
+
+

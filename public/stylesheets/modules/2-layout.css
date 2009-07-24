@@ -1,0 +1,14 @@
+/* =Layout
+----------------------------------------------------------------------------*/
+
+.ui-draggable-dragging { z-index:999999999 !important;}
+.ui-resizable-handle {width:2px !important;background-color:transparent !important;}
+.ui-layout-resizer-east, .ui-layout-resizer-west {background-color:#505050; } 
+.ui-layout-north, .ui-layout-south  {background-color:#505050; } 
+.ui-layout-north  {border-bottom:1px solid #505050; } 
+.ui-layout-south  {border-top:1px solid #505050; } 
+div.ui-layout-north { background:transparent url('/gui/sp.png') repeat-x top left;}
+div.ui-layout-south { background:transparent url('/gui/sp.png') repeat-x 0 -24px;}
+div.ui-layout-center { background:transparent url('/gui/bg.png'); position: relative;}
+div.ui-layout-west { background-color:#d5dde5; }
+

@@ -1,0 +1,25 @@
+<% if @tag_list && @tag_list.size > 0 %>
+<% if !@no_container %>
+  <div id="tagbar">
+<% end %>
+<!--    
+    <a href="#" class="due-filter"><span>Due Filter</span></a>
+-->
+    <ul>
+      <li class="selected"><a href="#tag:ALL">All</a></li>
+      <% for tag in @tag_list.sort! {|x,y| x.casecmp y  }  %>
+        <li><a href="#tag:<%= tag %>"><%= tag %></a></li>
+      <% end %>
+      <% if @none_tag %>
+        <li><a href="#tag:NONE">None</a></li>
+      <% end %>
+    </ul>
+<% if !@no_container %>
+  </div>
+<% end %>  
+<% else %>  
+<% if !@no_container %>
+<div id="tagbar" class="hidden-tagbar">
+</div>
+<% end %>
+<% end %>

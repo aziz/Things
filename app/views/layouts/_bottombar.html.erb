@@ -1,0 +1,14 @@
+<div class="ui-layout-south">
+  <div id="footer">
+    <a class="button plus" title="Hint" href="#"><span>Plus</span></a>
+    <a class="button gear" title="Hint" href="#"><span>Gear</span></a>
+    <div id="search-box">
+      <div class="left-cap"></div>    
+      <div class="text-holder">
+        <input type="text" name="search" value="" id="search" /> 
+      </div> 
+      <div class="right-cap"></div>       
+    </div>  
+    <div id="status-bar"><%= ( pluralize(@tasks.size, "item") if @tasks && @tasks.size > 0 ) || ( pluralize(@projects.size, "item") if @projects && @projects.size > 0 )  %> </div>
+  </div>
+</div> 

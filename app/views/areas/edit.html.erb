@@ -1,0 +1,14 @@
+<h1>Editing areas</h1>
+
+<% form_for(@area) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @area %> |
+<%= link_to 'Back', :back %>

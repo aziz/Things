@@ -1,0 +1,139 @@
+<div class="ui-layout-west" id="sidebar">
+	<div class="sidebar ui-layout-content">
+	  <div style="position:relative;min-height:100%">
+    <div class="nav-list nav-list-top">
+      <ul>
+        <li>
+          <span class="title">Collect</span>
+          <ul class="section-list">
+    				<li id="inbox" class="droppable <%= 'active' if params[:action] == "inbox" %> <%= "has_capsule" if current_user.tasks.inbox.count > 0 %>">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="<%= inbox_path %>"> 
+                  <span class="capsule"><%= current_user.tasks.inbox.count(:conditions => { :done_at => nil }) %></span>     
+                  <img class="icon inbox" src="/gui/blank.gif" alt="icon" />
+                  <span class="title">Inbox</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="title">Focus</span>
+          <ul class="section-list">
+    				<li id="today" class="droppable <%= 'active' if params[:action] == "today" %> <%=  "has_capsule" if current_user.tasks.today.count > 0   %>">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="<%= today_path %>">
+                  <span class="capsule"><%= current_user.tasks.today.count(:conditions => { :done_at => nil }) %></span>
+                  <img class="icon today" src="/gui/blank.gif" alt="icon" />
+                  <span class="title">Today</span>
+              </a>
+            </li>
+    				<li id="next" class="droppable <%= "active" if params[:action] == "next" %>">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="<%= next_path %>">
+                   <img class="icon next" src="/gui/blank.gif" alt="icon" />
+                  <span class="title">Next</span>
+              </a>
+            </li>            
+<!--
+    				<li id="scheduled" class="droppable <%= "active" if params[:action] == "scheduled" %>">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="<%= scheduled_path %>">
+                  <img class="icon scheduled" src="/gui/blank.gif" alt="icon" />
+                  <span class="title">Scheduled</span>
+              </a>
+            </li>            
+-->            
+    				<li id="someday" class="droppable <%= "active" if params[:action] == "someday" %>">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="<%= someday_path %>">
+                  <img class="icon someday" src="/gui/blank.gif" alt="icon" />
+                  <span class="title">Someday</span>
+              </a>
+            </li>          
+    				<li id="projects" class="droppable <%= "active" if params[:controller] == "projects" %>">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="<%= projects_path %>">
+                  <img class="icon projects" src="/gui/blank.gif" alt="icon" />
+                  <span class="title">Projects</span>
+              </a>
+            </li>                                                       
+          </ul>
+        </li>  
+
+        
+        <li class="collapsable" id="active-projects-list">
+          <% if @sidebar_projects && @sidebar_projects.size > 0 %>   
+          <span class="title"><span class="icon"></span>Active Projects</span>
+          <ul class="section-list">
+    				<% for project in @sidebar_projects %>
+            <li id="p-<%= project.id %>" class="droppable">
+              <div class="drop-highlight"></div>
+              <a class="row" href="<%= project_path(project) %>">
+                  <img class="icon project" src="/gui/blank.gif" alt="icon" />
+                  <span class="title"><%= project.title  %></span>
+              </a>
+            </li>
+            <% end %>
+          </ul>
+          <% end %>
+        </li>          
+        
+<!--                  
+        <% if @sidebar_areas %>
+        <li class="collapsable" id="areas-list">
+          <span class="title"><span class="icon"></span>Areas</span>
+          <ul class="section-list">
+            <% for area in @sidebar_areas %>
+    				<li id="a-<%= area.id %>" class="droppable">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="<%= area_path(area) %>">
+                  <img class="icon area" src="/gui/blank.gif" alt="icon" />
+                  <span class="title"><%= area.title %></span>
+              </a>
+            </li>
+            <% end %>
+          </ul>
+        </li> 
+        <% end %>           
+    
+        <li class="collapsable close" id="people-list">
+          <span class="title"><span class="icon"></span>People</span>
+          <ul class="section-list">
+    				<li id="u-xxx" class="droppable">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="#">
+                  <img class="icon person" src="/gui/blank.gif" alt="icon" />
+                  <span class="title">Jason</span>
+              </a>
+            </li>            
+          </ul>
+        </li>                    
+-->
+      </ul>
+      <div style="height:60px"></div>
+    </div>
+    <div class="nav-list nav-list-bottom">
+      <ul>
+        <li>
+          <ul class="section-list">
+    				<li id="done" class="droppable <%= "active" if params[:action] == "logbook" %>">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="<%= logbook_path %>">
+                  <img class="icon logbook" src="/gui/blank.gif" alt="icon" />
+                  <span class="title">Logbook</span>
+              </a>
+            </li>
+    				<li id="trash" class="droppable <%= "active" if params[:action] == "trash" %>">
+    				  <div class="drop-highlight"></div>
+              <a class="row" href="<%= trash_path %>">
+                  <img class="icon <%= trash_count == 0 ? "trash":"trash-full" %>" src="/gui/blank.gif" alt="icon" />
+                  <span class="title">Trash <%= "(<span class='trash-capsule'>" + trash_count.to_s + "</span>)" if trash_count > 0  %></span>
+              </a>
+            </li>                                             
+          </ul>
+        </li>        
+      </ul>
+    </div>       
+	  </div>
+	</div>
+</div>  

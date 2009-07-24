@@ -1,0 +1,151 @@
+/* =TOOLBAR
+----------------------------------------------------------------------------*/
+#toolbar {
+  border-top:1px solid #666;
+  height:55px;
+  background-color:#dedede;
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+}
+
+.toolbar {
+	height:55px;
+	color:#000;
+	position:relative;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.toolbar.dark {
+	height:56px;
+	border-bottom:1px solid #4b4b4b;
+	color:#000;
+	position:relative;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.toolbar .centerbox { 
+  position:absolute;
+  top:0;
+  left:50%;
+  margin:0 auto;
+  text-align:left;
+  visibility: hidden;
+}
+
+.toolbar .rightbox {text-align:right;}
+.toolbar .leftbox {text-align:left;}
+.toolbar .rightbox a,.toolbar .rightbox span {float:right}
+.toolbar .leftbox a,.toolbar .leftbox span {float:left;}
+.toolbar .centerbox a,.toolbar .centerbox span {float:left;}
+
+.toolbar ul { margin:0 8px;height:100%;min-width:50px} 
+.toolbar li {	display:inline;}
+
+.toolbar ul.leftbox,.toolbar ul.centerbox {float:left}
+.toolbar ul.rightbox  {float:right}
+
+.toolbar .leftbox li,.toolbar .centerbox li  {float:left;}
+.toolbar .rightbox li {float:left;}
+
+.toolbar a {
+	color:#000;
+	padding-top:34px;
+	margin:5px;
+	min-width:34px;
+	display:block;
+	text-align:center;	
+	position: relative;
+	text-shadow:0 1px 0 rgba(255, 255, 255, 0.4);	
+}
+
+.toolbar a:active {	text-shadow:0 1px 1px rgba(0, 0, 0, 0.2);		}
+.toolbar a.disabled:active {	text-shadow:none;		}
+.toolbar a.disabled { color:#808084;}
+
+.toolbar a img {
+  display: block;
+  position: absolute;
+  top:0;
+  left:50%;
+  height:32px;
+  width:32px;
+  margin-left:-16px;
+}
+
+.toolbar li.gui_separator span {
+	width:3px;
+	height:43px;
+	margin:5px;
+	display:block;
+	background:transparent url("/gui/toolbar/separator.png") repeat-y top center;
+}
+
+.toolbar li.gui_space span {
+	width:22px;
+	height:43px;
+	margin:5px;
+	display:block;
+}
+
+
+
+/* TOOLBAR:ICONS------------------------------------------------------------- */
+#toolbar .tb-new a img {background:transparent url("/gui/tb.png") no-repeat 0 3px;	}
+#toolbar .tb-new a:active img {background:transparent url("/gui/tb.png") no-repeat -64px 3px;	}
+#toolbar .tb-new a.disabled img, #toolbar .tb-new a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px 3px;	}
+
+#toolbar .tb-p-new a img {background:transparent url("/gui/tb.png") no-repeat 0 -384px;	}
+#toolbar .tb-p-new a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -384px;	}
+#toolbar .tb-p-new a.disabled img, #toolbar .tb-p-new a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -384px;	}
+
+#toolbar .tb-edit a img {background:transparent url("/gui/tb.png") no-repeat 0 -288px;	}
+#toolbar .tb-edit a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -288px;	}
+#toolbar .tb-edit a.disabled img, #toolbar .tb-edit a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -288px;	}
+
+#toolbar .tb-tags a img {background:transparent url("/gui/tb.png") no-repeat 0 -160px;	}
+#toolbar .tb-tags a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -160px;	}
+#toolbar .tb-tags a.disabled img, #toolbar .tb-tags a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -160px;	}
+
+#toolbar .tb-qentry a img {background:transparent url("/gui/tb.png") no-repeat 0 -127px;	}
+#toolbar .tb-qentry a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -127px;	}
+#toolbar .tb-qentry a.disabled img, #toolbar .tb-qentry a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -127px;	}
+
+#toolbar .tb-today a img {background:transparent url("/gui/tb.png") no-repeat 0 -64px;	}
+#toolbar .tb-today a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -64px;	}
+#toolbar .tb-today a.disabled img, #toolbar .tb-today a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -64px;	}
+
+#toolbar .tb-file a img {background:transparent url("/gui/tb.png") no-repeat 0 -96px;	}
+#toolbar .tb-file a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -96px;	}
+#toolbar .tb-file a.disabled img, #toolbar .tb-file a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -96px;	}
+
+#toolbar .tb-log a img {background:transparent url("/gui/tb.png") no-repeat 0 -352px;	}
+#toolbar .tb-log a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -352px;	}
+#toolbar .tb-log a.disabled img, #toolbar .tb-log a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -352px;	}
+
+#toolbar .tb-schedule a img {background:transparent url("/gui/tb.png") no-repeat 0 -320px;	}
+#toolbar .tb-schedule a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -320px;	}
+#toolbar .tb-schedule a.disabled img, #toolbar .tb-schedule a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -320px;	}
+
+#toolbar .tb-show-in-next a img {background:transparent url("/gui/tb.png") no-repeat 0 -224px;	}
+#toolbar .tb-show-in-next a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -224px;	}
+#toolbar .tb-show-in-next a.disabled img, #toolbar .tb-show-in-next a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -224px;	}
+
+#toolbar .tb-move-to-next a img {background:transparent url("/gui/tb.png") no-repeat 0 -448px;	}
+#toolbar .tb-move-to-next a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -448px;	}
+#toolbar .tb-move-to-next a.disabled img, #toolbar .tb-move-to-next a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -448px;	}
+
+#toolbar .tb-p-inactive a img {background:transparent url("/gui/tb.png") no-repeat 0 -416px;	}
+#toolbar .tb-p-inactive a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -416px;	}
+#toolbar .tb-p-inactive a.disabled img, #toolbar .tb-p-inactive a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -416px;	}
+
+#toolbar .tb-p-active a img {background:transparent url("/gui/tb.png") no-repeat 0 -480px;	}
+#toolbar .tb-p-active a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -480px;	}
+#toolbar .tb-p-active a.disabled img, #toolbar .tb-p-active a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -480px;	}
+
+#toolbar .tb-trash a img {background:transparent url("/gui/tb.png") no-repeat 0 -256px;	}
+#toolbar .tb-trash a:active img {background:transparent url("/gui/tb.png") no-repeat -64px -256px;	}
+#toolbar .tb-trash a.disabled img, #toolbar .tb-trash a.disabled:active img {background:transparent url("/gui/tb.png") no-repeat -32px -256px;	}

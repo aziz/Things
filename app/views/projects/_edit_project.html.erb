@@ -1,0 +1,47 @@
+<% form_for(project, :html => { :autocomplete => "off"} ) do |f| %>
+  <%= f.error_messages %>
+      <div class="new-project edit-project" id="project">
+        <div class="title-box">
+          <span class="checkbox"></span>
+          <div class="title">
+            <label for="project_title">New Project</label>
+            <%= f.text_field :title %>
+          </div>           
+        </div>
+        <div class="tag-box">
+          <span class="add-tag"></span>
+          <span class="tag-icon"></span>
+          <label for="project_tag_list" class="<%=  "has_value" if project.tag_list && project.tag_list.size > 0  %>">Tags</label>
+          <%= f.text_field :tag_list %>          
+        </div>
+        <div class="due-box">
+          <span class="settings"></span>
+          <span class="due-icon"></span>
+          <div class="due-menu">
+            <label for="project_due_date" class="<%= "has_value" if project.due_date %>">Due Date</label>
+            <%= f.text_field :due_date, :class => "due_date" %>
+            <a href="#" class="clear-due-date"></a>
+            <div class="due-opt-popup">
+              <span class="due-opt-desc">Show in Today:</span>
+              <div class="due-opt-popup-inner">
+              <span class="opt1">
+                <span class="due-opt">on date</span>  
+                <span class="due-opt-popup-icon"></span>          
+              </span>
+              <span class="opt2">
+                <label for="project_show_days_before_due" class="has_value">Days</label>
+                <%= f.text_field :show_days_before_due, :class => "show_days_before_due" %>
+                <span class="due-opt">days before</span>  
+                <span class="due-opt-popup-icon"></span>          
+              </span>
+              </div>
+            </div>  
+          </div>
+        </div>        
+        <div class="note-box">
+          <span class="note-icon"></span>
+          <label for="project_notes" class="<%= "has_value" if project.notes && project.notes.size > 0  %>">Notes</label>
+          <%= f.text_area :notes, :size => "80x2" %>
+        </div>
+      </div>  
+<% end %>      

@@ -1,0 +1,12 @@
+[submodule "vendor/plugins/asset_packager"]
+	path = vendor/plugins/asset_packager
+	url = git://github.com/sbecker/asset_packager.git
+[submodule "vendor/plugins/restful-authentication"]
+	path = vendor/plugins/restful-authentication
+	url = git://github.com/technoweenie/restful-authentication.git
+[submodule "vendor/plugins/hoptoad_notifier"]
+	path = vendor/plugins/hoptoad_notifier
+	url = git://github.com/thoughtbot/hoptoad_notifier.git
+[submodule "vendor/plugins/will_paginate"]
+	path = vendor/plugins/will_paginate
+	url = git://github.com/mislav/will_paginate.git

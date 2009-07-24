@@ -1,0 +1,61 @@
+<% if !task.respond_to?('active') %>
+
+<li class="task <%= "done" if task.done? %> <%= "task-done" if task.in_logbook? %>" id="t-<%= task.id %>">
+  <% if task.due_at %>
+    <span class="due <%= "overdue" if task.overdue? %>"> 
+      <%= relative_due_date(task.due_at) %> 
+    </span>
+  <% end %>
+  
+  <% if task.in_today? %>
+  <span class="today"></span>
+  <% end %>
+  
+  <% if task.tag_list.size > 0  %>
+  <ul class="tags">
+    <% for tag in task.tag_list %>
+      <li title="<%= tag %>"><%= tag %></li>
+    <% end %>
+  </ul>
+  <% end %>
+  
+  <span class="checkbox <%= "is_today" if task.in_today? %> <%= "is_overdue" if task.overdue? %>"></span>
+  
+  <% if task.in_logbook? %>
+  <span class="done-date"><%=  task.done_at.strftime("%b %d, %Y") %></span>
+  <% end %>
+  
+  <span class="title">
+    <% if task.in_today? && params[:action] == "today" && task.project_id %>
+    <span class="title-prepend"><%= task.project.title %>:</span>
+    <% end %>
+    <%= task.title %>
+  </span>
+  
+  <% if task.notes && task.notes.size > 0  %>
+    <img class="note-icon" src="/gui/blank.gif" alt="Note"/>
+  <% end %>
+</li>
+
+<% else  %>  <%# it is a header   %> 
+
+<li class="header">
+  <% if task.due_at %>
+    <span class="due <%= "overdue" if task.overdue? %>"> 
+      <%= relative_due_date(task.due_at) %> 
+    </span>
+  <% end %>  
+  
+  <% if task.tag_list.size > 0  %>
+  <ul class="tags">
+    <% for tag in task.tag_list %>
+      <li title="<%= tag %>"><%= tag %></li>
+    <% end %>
+  </ul>
+  <% end %>       
+  
+  <span class="title"><%= task.title %></span>
+</li>
+
+<% end  %>
+

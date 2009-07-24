@@ -1,0 +1,8 @@
+<div class="ui-layout-north">
+  <div id="user-name">
+    <%= current_user.login.capitalize %>
+  </div>
+  <div id="logout">
+    <%= link_to "Log out", logout_path, { :title => "Log out" }    %>
+  </div>
+</div>  

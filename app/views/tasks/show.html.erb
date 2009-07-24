@@ -1,0 +1,4 @@
+<%= render :partial => '/tasks/task', :object => @task %>
+<ul class="hidden-edit-task" style="display:none">
+  <%= render :partial => '/tasks/edit_task', :object => @task, :locals => { :task => @task } %>
+</ul> 

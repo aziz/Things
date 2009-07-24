@@ -1,0 +1,88 @@
+--- tasks
+
++ Project: include task in all project finds
++ Project: confirm done (dialog needed)
++ Project: active/inactive
++ Project: update_sidebar for projects
++ Project: list projects by area
++ Project: new from button
++ Project: new from shortcut
++ Project: show done
+
++ (E) IMP - put js file into seperate ones/ maybe preload technique in the notebook
++ (E) IMP - Devide CSS into multiple files
++ (E) shortcuts for moving items to different pages
++ (E) due: red badge for due tasks / recode the update_badge
++ (E) update badge when emptied update nemihe / drag on self
++ (E) make shortcuts more compatible with things
++ (E) use location.hash = 'foo'; on ajax calls that change the page to update the address and do history management
++ (E) test ui.menu for popups
++ (E) read context menu plugin
++ (E) make  preloader
++ (E) GUI: hide toolbar texts
++ (E) GUI: rounded corners in IE
++ (E) add autocomplete="off" to forms
++ (E) put semicolon at the end of all function calls for minimization
++ (E) in projects log completed will not hide just add date
+
++ (M) GUI: use jsscroll for hud
++ (M) GUI: other types of dialogs: modals, growls, pickers, alerts - normal, hud, drop
++ (M) due: due popup menu
++ (M) tag hud server side
++ (M) Empty trash
++ (M) make tags added by enter
+
++ (D) edit: update local copy on save rjs
++ (D) add new task where it really should be rjs
++ (D) popup: on hide
++ (D) popup: r/w checkbox and disabled
++ (D) reimplment sortables
++ (D) auto complete for tags jquery UI
++ (D) make context parameter for all jquery selector calls to boost the performance
++ (D) due: move to today and make red
++ (D) due: make due date handling with date and compensate time zone
++ (D) due: due icon in tag bar
++ (D) multiple drag items
++ (D) make show in list toolbar:default show in list,show in project,show in area,show in next,show in logbook 
++ (D) multiple tag selection in tag bar control click
+
++ (?) introduce a concept of focus (a class) to make better keyboard navigation
++ (?) show shortcuts as title
++ (?) hint on tags: tags can be useful to retrieve items more easily.
++ (?) use scope to match modes (rules for moves)
+
+LATER:
++ auto resze textarea needs animation in IE
++ FF3.1  popup call will not apear
++ FF3.1  focus on filed not working space/edit/
++ (BUG) double adding or drop
+
+==========================================================================================
+
+LONGTERM Later:
+- time zones
+- cancel items
+- save sortable order
+- schedule
+- repeat
+- add other person
+- TAG heirarchy
+- search
+
+GUI
+----------------------------
+task scheduled list
+tagbar sublevels
+tag HUD
+quick entry HUD
+
+
+IE ISSUE:
+---------------------
+opacity:
+rgba:
+rounded corners:
+@fontface: use .eot
+text-shadow: NO WAY
+text-box-shadow: js find it
+text-select-disable: js

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Things</title>
+	<link rel="icon" href="/gui/icon32.png" sizes="32x32" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+  <%= stylesheet_link_tag 'app' %>
+</head>
+
+<body id="<%= params[:controller] %>" class="<%= body_class %>">
+<%= render :partial => '/layouts/topbar' %>
+<%= render :partial => '/layouts/sidebar' %>
+
+<div class="ui-layout-center" id="ui-layout-center">
+<%= render :partial => '/layouts/tagbar' %>
+<%= render_toolbar %>
+  <div id="main-content">
+    <div class="ui-layout-content">
+      <%= yield %>  
+    </div>
+  </div>
+</div>  
+<%= render :partial => '/layouts/bottombar' %>
+
+<%# JS FILES -------------------------------------------------  %>
+<% if protect_against_forgery? %>
+<script type='text/javascript'>
+//<![CDATA[
+  window._auth_token_name = "<%= request_forgery_protection_token %>";
+  window._auth_token = "<%= form_authenticity_token %>";
+  window.current_user = "<%= current_user.id  %>";
+//]]>
+</script>
+<% end %>  
+<%= javascript_include_tag "jquery-1.3.2.min.js", "jquery.livequery.js", "jquery.layout-1.2.min.js", 
+                           "jquery.ui-1.7.1.custom.js", "jquery.limitchatwidth-0.6.js", "jquery.tache.js", 
+                           "jquery.autoresize.js", "jquery.popup-0.1.js", "jquery.hotkeys-0.7.8.min.js", 
+                           
+                           "app/helpers.js", "app/init.js", "app/tasks.js", 
+                           "app/sidebar.js", "app/toolbar.js", "app/tagbar.js", 
+                           "app/shortcuts.js",  :cache => true %>
+
+<!--[if IE]>
+  
+<![endif]-->
+<%# ----------------------------------------------------------  %>
+
+</body>
+</html>

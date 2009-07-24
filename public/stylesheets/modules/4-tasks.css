@@ -1,0 +1,509 @@
+
+/* =TASK-LIST
+----------------------------------------------------------------------------*/
+
+#main-content .ui-layout-content {  padding:14px 7px;}
+
+.task-list {padding-bottom:14px;}
+.task, .project-list-item {
+  height:27px;line-height:27px;
+  background:white url('/gui/sp.png') repeat-x 0 -365px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  -webkit-box-shadow: 0px 0px 2px #666;
+  -moz-box-shadow: 0px 0px 2px #666;
+  margin-bottom:1px;
+  position: relative;
+  white-space:nowrap;
+  overflow:hidden;
+  cursor:default;
+}
+
+.task.done {
+  background:white url('/gui/sp.png') repeat-x 0 -745px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;  
+  color:#444;
+}
+
+.checkbox  {
+  position: absolute;
+  top:6px;left:6px;
+  width:16px;height:16px;
+  background:transparent url('/gui/sp.png') repeat-x 0 -400px;
+}
+
+.checkbox:hover, .checkbox:active  {  background:transparent url('/gui/sp.png') repeat-x -16px -400px;}
+.checkbox.is_today { background:transparent url('/gui/sp.png') repeat-x 0 -416px; }
+.checkbox.is_today:hover, .checkbox.is_today:active  {  background:transparent url('/gui/sp.png') repeat-x -16px -416px;}
+.checkbox.is_overdue { background:transparent url('/gui/sp.png') repeat-x 0 -432px; }
+.checkbox.is_overdue:hover, .checkbox.is_overdue:active  {  background:transparent url('/gui/sp.png') repeat-x -16px -432px;}
+
+.done .checkbox {
+  background:transparent url('/gui/sp.png') repeat-x 0 -464px;
+}
+
+.done .checkbox:hover, .done .checkbox:active {
+  background:transparent url('/gui/sp.png') repeat-x -16px -464px;
+}
+
+.task .title {padding:0 2px 0 33px}
+.task .title .title-prepend {color:#777;}
+
+.task .note-icon {
+  width:16px; height:16px;
+  background:transparent url('/gui/sp.png') repeat-x 0 -544px;  
+  vertical-align:middle;
+}
+
+.task .tags, .project-list-item .tags  {
+  float:right;  
+  margin:0px 4px;
+}
+
+.task .tags li, .project-list-item .tags li {
+  display: inline;  
+  border:1px solid #b7ccf1;
+  -moz-border-radius:7px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  background-color:#e5edfa;
+  padding:0 8px;
+  font-size:7pt;
+  color:#444;
+}
+
+.done .tags li {
+  border:0px;
+  background-color:#d8dce4;
+  color:#666;
+  -moz-border-radius:6px;
+  -webkit-border-radius:5px;
+  border-radius:5px;  
+}
+
+
+.task .today {
+  float:right;  
+  margin:6px 4px 0 0;
+  width:16px;height:16px;
+  background:transparent url('/gui/sp.png') repeat-x 0 -480px; 
+}
+
+.task.done .today {  background:transparent url('/gui/sp.png') repeat-x -16px -480px; }
+
+.task .due, .project-list-item .due {
+  float:right; 
+  width:85px;
+  border-left:1px solid #cecece;
+  text-align:center;
+  color:#777;
+  font-size:7pt;
+}
+
+.task .overdue, .project-list-item .overdue  {
+  border-left:1px solid #fbc0c3;  
+  background:transparent url('/gui/sp.png') repeat-x 0 -560px; 
+  -moz-border-radius-topright:4px; 
+  -moz-border-radius-bottomright:4px; 
+  -webkit-border-top-right-radius:4px;
+  -webkit-border-bottom-right-radius:4px;
+  color:#4d4d4d; 
+}
+
+.header {
+  height:27px;line-height:27px;
+  margin-bottom:1px;
+  margin-top:15px;
+  position: relative;
+}
+
+.header .due {
+  float:right; 
+  width:85px;
+  text-align:center;
+  color:#000;
+  font-size:7pt;
+  text-shadow:0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.header .overdue {
+  color:#732324; 
+  text-shadow:0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.header .title {
+  text-align:center;
+  display: block;
+  width:100%;
+  font-weight:bold;
+  text-shadow:0 1px 1px rgba(255, 255, 255, 0.5);
+  color:#000;
+}
+
+.header.overdue .title {  color:#732324; }
+.header .tags {
+  float:right;  
+  margin:0px 4px;
+}
+
+.header .tags li {
+  display: inline;  
+  border:1px solid #808080;
+  -moz-border-radius:7px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  background-color:#b6b9bf;
+  padding:0 8px;
+  font-size:7pt;
+  color:#4d4d4d;
+  -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.3);  
+}
+
+.new-task, .edit-task {
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;  
+  -webkit-box-shadow: 0px 0px 5px #333;
+  -moz-box-shadow: 0px 0px 5px #333;
+  margin:8px 0;
+  position: relative;
+  background:white url('/gui/sp.png') repeat-x 0 -590px;
+}
+
+.new-task div, .edit-task div {overflow: hidden; }
+
+.new-task .title-box, .edit-task .title-box {
+  /* background-color:white; */
+  -moz-border-radius-topleft:4px; 
+  -moz-border-radius-topright:4px; 
+  -webkit-border-top-left-radius:4px;
+  -webkit-border-top-right-radius:4px;   
+  padding:0 2px 0 33px;
+  height:27px;
+  line-height:27px;
+  position: relative;
+}
+.new-task .tag-box, .edit-task .tag-box {
+  /* background-color:#f6f6f6;  */
+  padding:0 2px 0 33px;
+  height:21px;
+  line-height:20px;  
+  position: relative;  
+}
+.new-task .note-box, .edit-task .note-box  {
+  border-bottom:1px solid #efefef;
+  border-top:1px solid #efefef;
+  background-color:#f7f6ed;    
+  padding:0 2px 0 33px;
+  min-height:38px !important;
+  position: relative;
+}
+.new-task .due-box, .edit-task .due-box  {
+  background:white url('/gui/sp.png') repeat-x 0 -640px;
+  /* background-color:#f4f4f4; */
+  -moz-border-radius-bottomleft:4px; 
+  -moz-border-radius-bottomright:4px; 
+  -webkit-border-bottom-left-radius:4px;
+  -webkit-border-bottom-right-radius:4px;   
+  padding:0 2px 0 33px;
+  height:22px;
+  line-height:22px;
+  position: relative;
+}
+
+.new-task .due-icon, .edit-task .due-icon, .new-project .due-icon {
+  position: absolute;
+  top:3px;left:6px;
+  width:16px;height:16px;
+  background:transparent url('/gui/sp.png') repeat-x -16px -670px;
+}
+
+.new-task .tag-icon, .edit-task .tag-icon, .new-project .tag-icon {
+  position: absolute;
+  top:3px;left:6px;
+  width:16px;height:16px;
+  background:transparent url('/gui/sp.png') repeat-x 0px -670px;
+}
+
+.new-task .add-tag, .edit-task .add-tag, .new-project .add-tag {
+  float:right;
+  width:25px;height:13px;
+  margin:4px 4px 0 0;
+  background:transparent url('/gui/sp.png') repeat-x 0px -699px;
+}
+
+.new-task .add-tag:hover, .new-task .add-tag:active,
+.edit-task .add-tag:hover, .edit-task .add-tag:active,
+.new-project .add-tag:hover, .new-project .add-tag:active {
+  background:transparent url('/gui/sp.png') repeat-x 0px -686px;
+}
+
+.new-task .note-icon, .edit-task .note-icon,.new-project .note-icon {
+  position: absolute;
+  top:6px;left:6px;
+  width:16px;height:16px;
+  background:transparent url('/gui/sp.png') repeat-x -16px -544px;  
+}
+
+.new-task .due-menu, .edit-task .due-menu { color:#b9b5b5;}
+
+
+.new-task .settings, .edit-task .settings {
+  float:right;
+  width:20px;height:11px;
+  margin:6px 2px 0 0;
+  background:transparent url('/gui/sp.png') repeat-x 0px -730px;  
+}
+
+.new-task .settings:hover, .new-task .settings:active , 
+.edit-task .settings:hover, .edit-task .settings:active  {
+  background:transparent url('/gui/sp.png') repeat-x 0px -715px;  
+}
+
+
+.new-task input,.edit-task input,.new-project input { border:0; background-color:transparent; padding: 3px 0px; width:90%;}
+.new-task label,.edit-task label { 
+  color:#B9B5B5;
+  position: absolute;
+  left:35px;
+  display: block;
+}
+.new-project label { 
+  color:#B9B5B5;
+  position: absolute;
+  left:42px;
+  top:3px;
+  display: block;
+}
+
+.new-project .note-box label { top:6px;}
+
+.title label { display: none;}
+.note-box label { top:3px;}
+.blur {color:#B9B5B5;}
+label.has_value {display: none;}
+.new-task textarea, .edit-task textarea, .new-project textarea {
+  border:0; 
+  background-color:transparent;
+  padding:5px 10px 5px 0;
+  width:80% !important;
+  height:34px;
+}
+
+.due-menu input { 
+  width:72px;
+  float:left;
+  height:14px;
+  padding:1px;
+  margin:2px 0;
+  border:1px solid transparent;  
+}
+
+.due-menu input:focus, .due-menu input.focused_due {  background-color: #FFF;border:1px solid #9b9c9e;}
+a.clear-due-date {
+  display:none;  
+  width:12px;height:12px;
+  background:transparent url('/gui/sp.png') repeat-x -20px -1035px; 
+  float:left;
+  margin:5px;  
+  border:0;
+}
+a.clear-due-date:hover { background:transparent url('/gui/sp.png') repeat-x -20px -1048px; }
+a.clear-due-date:active {   background:transparent url('/gui/sp.png') repeat-x -20px -1061px; }
+.new-project a.clear-due-date {  margin:3px 5px;  }
+
+.due-opt-popup {  float:left;   display:none;}
+.new-project .due-opt-popup { margin-top:2px;}
+.due-opt-popup-inner {  float:left;}
+.due-opt { color: #000;float:left;   margin-left:6px;}
+
+.due-opt-desc {
+  color:#838285;
+  margin-left:41px;
+  float:left;
+}
+
+.due-opt-popup-icon {
+  margin:7px 6px ;
+  float:left;
+  display: block;
+  width:5px;
+  height:8px;
+  background:transparent url('/gui/sp.png') repeat-x -27px -1075px; 
+  opacity:0.7;
+}
+
+.due-opt-popup-icon {  margin:4px 6px ;}
+
+.opt2 {display:none;}
+
+.has_due {display:block !important;}
+
+input.show_days_before_due {
+  width:18px;
+  text-align: center;
+  float:left;
+  height:14px;
+  padding:1px;
+  margin:2px 0;
+  border:1px solid #9b9c9e;    
+  background-color: #FFF;  
+}
+
+.selected {  background:transparent url('/gui/sp.png') repeat-x 0px -772px;  }
+.done.selected {background:transparent url('/gui/sp.png') repeat-x 0px -1299px;  }
+
+.new-project {
+  background:#f9f9f9 url('/gui/sp.png') repeat-x 0px -1145px; 
+  margin:-14px -7px 15px -7px;
+}
+
+.new-project .title-box {
+  height:36px;
+  border-bottom:1px solid #dadada;
+  position: relative;
+  padding:0 0 0 42px;  
+}
+
+.new-project .checkbox {  background:transparent url('/gui/sp.png') repeat-x 0 -920px;top:12px;left:14px;}
+.new-project .checkbox:hover,.new-project .checkbox:active {
+    background:transparent url('/gui/sp.png') repeat-x -16px -920px;
+}
+
+.new-project .tag-box {
+  height:20px;
+  border-bottom:1px solid #dadada;
+  border-top:1px solid #fff;
+  padding:0 0 0 42px;  
+  position:relative;
+}
+
+.new-project .due-box {
+  height:21px;
+  border-bottom:1px solid #dadada;
+  border-top:1px solid #fff;  
+  padding:0 0 0 42px;  
+  position:relative;
+}
+
+.new-project .due-box .due-menu { display: block;margin:1px 0 0 2px;}
+.new-project .due-box .due-menu input { margin:0px;}
+
+.new-project .note-box {
+  min-height:21px;
+  border-top:1px solid #fff;
+  border-bottom:1px solid #a3a491;
+  background-color: #F7F6ED;
+  padding:0 0 0 42px;  
+  position:relative;
+}
+
+.new-project .note-box textarea {
+  padding:4px 10px 3px 0;
+  height:18px;  
+}
+
+.new-project .title input {
+  font-size:12pt;
+  margin-top:6px;
+}
+
+.new-project .due-icon {
+  position: absolute;
+  top:3px;left:15px;
+  width:16px;height:16px;
+  background:transparent url('/gui/sp.png') repeat-x -16px -670px;
+}
+
+.new-project .tag-icon {
+  position: absolute;
+  top:3px;left:15px;
+  width:16px;height:16px;
+  background:transparent url('/gui/sp.png') repeat-x 0px -670px;
+}
+
+.new-project .add-tag {
+  float:right;
+  width:25px;height:13px;
+  margin:4px 4px 0 0;
+  background:transparent url('/gui/sp.png') repeat-x 0px -699px;
+}
+
+.new-project .add-tag:hover, .new-project .add-tag:active {
+  background:transparent url('/gui/sp.png') repeat-x 0px -686px;
+}
+
+.new-project .note-icon {
+  position: absolute;
+  top:6px;left:15px;
+  width:16px;height:16px;
+  background:transparent url('/gui/sp.png') repeat-x -16px -544px;  
+}
+
+
+
+
+.project-list-item .title {padding:0 2px 0 10px}
+.project-list-item .task-items {
+  float:left; 
+  width:75px;
+  color:#627b8f;
+  font-size:7pt;
+  background:transparent url('/gui/tb.png') no-repeat -85px -764px; 
+  text-shadow:0 1px 2px rgba(255, 255, 255, 0.8);
+  text-align:right;
+  padding-right:10px;
+  -moz-border-radius-topleft:4px; 
+  -moz-border-radius-bottomleft:4px; 
+  -webkit-border-top-left-radius:4px;
+  -webkit-border-bottom-left-radius:4px;
+  border-radius:4px; 
+}
+
+.project-list-item .checkbox {  background:transparent url('/gui/sp.png') repeat-x 0 -496px;}
+.project-list-item .checkbox:hover,.project-list-item .checkbox:active {
+    background:transparent url('/gui/sp.png') repeat-x -16px -496px;
+}
+
+.project-list-item.done {
+  background:white url('/gui/sp.png') repeat-x 0 -745px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;  
+  color:#444;  
+}
+
+.project-list-item.done .task-items {
+  background:white url('/gui/sp.png') repeat-x 0 -848px !important;
+  color:#6c757c;
+}
+
+.project-list-item.done .checkbox {  
+  background:transparent url('/gui/sp.png') repeat-x 0 -816px;
+  left:7px;
+}
+
+.project-list-item.done .checkbox:hover, .project-list-item.done .checkbox:active {  
+  background:transparent url('/gui/sp.png') repeat-x -16px -816px;
+}
+
+
+.task-done .checkbox,.task-done .checkbox:hover, .task-done .checkbox:active {  background:transparent url('/gui/sp.png') repeat-x -16px -832px;}
+.task-done .title { padding:0 2px 0 15px}
+.task-done .done-date {
+  float:left; 
+  width:85px;
+  color:#828589;
+  font-size:7pt;
+  text-align:right;
+}
+
+.loading {
+  width:64px;height:64px;
+  top:50%;left:50%;
+  margin:-32px 0 0 -32px;
+  background:transparent url('/gui/loader.gif') no-repeat top left;
+  position: absolute;
+}

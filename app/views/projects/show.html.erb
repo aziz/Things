@@ -1,0 +1,14 @@
+<%= render :partial => '/projects/edit_project', :object => @project, :locals => { :project => @project }%>          
+
+<ul class="task-list" id="task-list">
+    <%= render :partial => '/tasks/task', :collection => @tasks %>
+</ul>  
+
+<ul id="hidden-task-list" class="hidden-task-list" style="display:none">
+  <%= render :partial => '/tasks/edit_task', :collection => @tasks, :as => :task %>
+</ul>  
+
+<ul id="hidden-new-task" style="display:none">
+  <%= render :partial => '/tasks/new_task', :object => @new_task, :locals => { :task => @new_task } %>      
+</ul>
+

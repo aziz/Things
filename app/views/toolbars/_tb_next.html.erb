@@ -1,0 +1,20 @@
+  <div id="toolbar" class="toolbar">
+		<ul class="leftbox">
+			<li class="tb-new"><a href="<%= new_task_path(:page => "next") %>">New<img src="gui/blank.gif" alt="" class="icon" /></a></li>
+			<li class="tb-edit sel_based  not_multi"><a href="#" class="disabled">Edit<img src="gui/blank.gif" alt="" class="icon" /></a></li>
+		</ul>
+<!--			
+		<ul class="rightbox">
+			<li class="tb-qentry"><a href="#">Quick Entry<img src="gui/blank.gif" alt="" class="icon" /></a></li>
+		  <li class="tb-tags"><a href="#">Tags<img src="gui/blank.gif" alt="" class="icon" /></a></li>
+		</ul>
+-->
+		<ul class="centerbox">
+			<li class="tb-today sel_based"><a href="#" class="disabled">Today<img src="gui/blank.gif" alt="" class="icon" /></a></li>
+<!--			
+			<li class="tb-file sel_based"><a href="#" class="disabled">File<img src="gui/blank.gif" alt="" class="icon" /></a></li>
+-->						
+			<li class="tb-log done_based"><a href="#" class="<%= "disabled" unless @tasks.any? {|t| t.done_at }  %>">Log Completed<img src="gui/blank.gif" alt="" class="icon" /></a></li>
+
+		</ul>		
+  </div>
