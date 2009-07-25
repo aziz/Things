@@ -15,6 +15,8 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # GEMS ==========================================
+  config.gem "oauth"
+  config.gem "oauth-plugin"
   # config.gem 'twitter-auth', :lib => 'twitter_auth' 
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
