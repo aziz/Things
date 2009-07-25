@@ -1,6 +1,5 @@
 /* =RESET - YUI v2.4.0 & Eric Mayer
 ----------------------------------------------------------------------------*/
-html{color:#000;background:#FFF;overflow:-moz-scrollbars-vertical;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,
 html,span,applet,object,iframe,a, abbr, acronym, address, big, cite, code, del, dfn, em, font, 
 img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,label, table, 
@@ -84,7 +83,6 @@ body {
   right:127px;
   top:356px;
   width:218px;
-  xborder:1px solid red;
 }
 
 .signup-btn a {
@@ -112,5 +110,83 @@ body {
   -moz-box-shadow: 0px 0px 2px #666;  
   position: relative;
   top:5px;
+}
+
+#users {
+  background:none;
+  background-color:#D5E9ED;  
+  height:100%;
+}
+
+#users .wrapper {
+  background:none;
+  width:600px;
+}
+
+.signup-form {
+  margin:0 auto;
+  padding:40px 50px 0;  
+  font:bold 11pt/14px "lucida grande", "trebuchet ms", "tahoma";  
+}
+
+.signup-form p {
+  margin-bottom:8px;
+  position: relative;
+}
+
+.signup-form label {
+  font:10pt/13pt "lucida grande", "trebuchet ms", "tahoma";  
+  text-shadow:1px 1px #EEE;  
+  position: absolute;
+  top:23px;
+}
+
+.signup-form #user_login, .signup-form #user_email, .signup-form #user_password, .signup-form #user_password_confirmation {
+  width:320px;
+  padding:8px;
+  position: relative;
+  left:140px;
+}   
+
+.signup-form h1 {
+  font:bold 26pt/30pt "lucida grande", "trebuchet ms", "tahoma";  
+  text-shadow:1px 2px #FFF;  
+  color:#444;
+  text-align: center;
+  margin-bottom:20px;
+}
+
+.signup-submit input {
+  float:right;
+  margin:10px 22px 0 0;
+  padding:5px 25px;
+}
+
+.signup-logo {
+  height:85px;
+  background:transparent url('/images/temp_main_bg.png') no-repeat top center;
+}
+
+.signup-logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.signup-logo a span { display: none;}
+
+
+.fieldWithErrors input {
+  background-color:#ffdbda;
+}
+.errorExplanation {
+  font-size:10pt;
+  line-height:14pt;  
+}
+.errorExplanation h2 {
+
+}
+.errorExplanation li {
+
 }
 

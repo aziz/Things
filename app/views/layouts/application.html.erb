@@ -8,10 +8,12 @@
 	<%= stylesheet_link_tag   "home" %>
 </head>
 
-<body>
+<body id="<%= params[:controller] %>">
   
 <div class="wrapper">
-  <p class="flash-message"><%= flash[:notice] %><%= flash[:error] %></p>
+  <% if flash[:notice] || flash[:error] %>
+    <p class="flash-message"><%= flash[:notice] %><%= flash[:error] %></p>
+  <% end %>
   <%= yield %>  
 </div>
 
