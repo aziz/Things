@@ -34,12 +34,13 @@
 #     }
 #   }
 # }
-# 
-OAUTH_CREDENTIALS={
-   :twitter=>{
-     :key=>"bhne3B2JFJW7wdpBLeytEw",
-     :secret=>"w0FEAnQ5oc5EoqJbMePdEHmXQzx508nesyRSvIqnVg"
-   }
-} unless defined? OAUTH_CREDENTIALS
-
-load 'oauth/models/consumers/service_loader.rb'
+#
+ 
+#OAUTH_CREDENTIALS={
+#   :twitter=>{
+#     :key=>"bhne3B2JFJW7wdpBLeytEw",
+#     :secret=>"w0FEAnQ5oc5EoqJbMePdEHmXQzx508nesyRSvIqnVg"
+#   }
+#} unless defined? OAUTH_CREDENTIALS
+#
+#load 'oauth/models/consumers/service_loader.rb'
