@@ -40,9 +40,9 @@ $(function() {
 
 
   // on page ready get all pages and cache them 
-  $('.sidebar ul > li a').each(function() {
-    $.Tache.Get({ type: "GET", url: $(this).attr('href')  });  
-  });
+  //$('.sidebar ul > li a').each(function() {
+  //  $.Tache.Get({ type: "GET", url: $(this).attr('href')  });  
+  //});
   
   
   
