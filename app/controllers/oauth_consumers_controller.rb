@@ -1,6 +1,7 @@
 require 'oauth/controllers/consumer_controller'
 class OauthConsumersController < ApplicationController
   include Oauth::Controllers::ConsumerController
+  skip_before_filter :login_required
   
   protected
   

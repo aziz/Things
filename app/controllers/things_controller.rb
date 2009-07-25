@@ -1,14 +1,8 @@
 class ThingsController < ApplicationController
   before_filter :login_or_oauth_required, :sidebar_info
   
-  # experimental json 
-  def app
-    render :file => "/app/app", :layout => false
-  end
-  
-  
   def index
-    redirect_to :action => "inbox"  
+    redirect_to :action => "today"  
   end
   
   def inbox
