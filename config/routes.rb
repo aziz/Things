@@ -16,8 +16,6 @@ ActionController::Routing::Routes.draw do |map|
   map.trash '/trash', :controller => 'things', :action => 'trash'
   
   
-  map.trash '/app', :controller => 'things', :action => 'app'
-  
   map.resources :users
   map.resources :tasks , :member => { :done => :put, :undone => :put, :moveto => :post  }, 
                          :collection => { :log => :post, :destroy_all => :delete }
