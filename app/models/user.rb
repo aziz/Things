@@ -5,7 +5,6 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
   
-  has_one  :twitter_token,:class_name=>"TwitterToken", :dependent=>:destroy
   has_many :projects
   has_many :areas
   has_many :tasks

@@ -3,6 +3,9 @@
     <%= current_user.login.capitalize %>
   </div>
   <div id="logout">
+    <%= link_to "Help", "#help", { :title => "Help" }    %>
+    <%= link_to "Contact", "#contant", { :title => "Contact us" }    %>
+    <%= link_to "Feedback", "#Fedback_path", { :title => "Your Suggestions, Problems, anything!" }    %>
     <%= link_to "Log out", logout_path, { :title => "Log out" }    %>
   </div>
 </div>  
