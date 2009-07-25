@@ -1,5 +1,5 @@
 oauth
 oauth-plugin
 mash
-httparty
+httparty --version 0.4.3
 paulsingh-twitter --source gems.github.com
