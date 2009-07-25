@@ -6,7 +6,18 @@
 	<title>Things</title>
 	<link rel="icon" href="/gui/icon32.png" sizes="32x32" />
 	<link rel="shortcut icon" href="/favicon.ico" />
-  <%= stylesheet_link_tag 'app' %>
+  <%= stylesheet_link_tag 
+        'modules/1-reset',
+        'modules/2-layout',
+        'modules/3-tagbar',
+        'modules/4-tasks',
+        'modules/5-navlist',
+        'modules/6-toolbar',
+        'modules/7-menu',
+        'modules/8-app',
+        'modules/9-datepicker',
+        :cache => true
+   %>
 </head>
 
 <body id="<%= params[:controller] %>" class="<%= body_class %>">
