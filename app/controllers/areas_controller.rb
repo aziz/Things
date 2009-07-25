@@ -1,6 +1,6 @@
 class AreasController < ApplicationController
   layout "things"
-  before_filter :login_or_oauth_required
+  before_filter :login_required
 
   # GET /areas
   # GET /areas.xml

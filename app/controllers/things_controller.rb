@@ -1,5 +1,5 @@
 class ThingsController < ApplicationController
-  before_filter :login_or_oauth_required, :sidebar_info
+  before_filter :login_required, :sidebar_info
   
   def index
     redirect_to :action => "today"  

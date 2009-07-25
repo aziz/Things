@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   layout "things"
-  before_filter :login_or_oauth_required, :sidebar_info
+  before_filter :login_required, :sidebar_info
 
   # GET /projects
   # GET /projects.xml
